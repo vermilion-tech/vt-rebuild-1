@@ -1,0 +1,15 @@
+.vt-form-text {
+	background-color: $pale-yellow;
+	border-radius: 2px;
+	padding: 1.4rem 2rem 1.6rem;
+	width: 100%;
+
+	input {
+		background: transparent;
+		border-style: none;
+		color: $maroon;
+		font-size: 1.6rem;
+		line-height: 2rem;
+		width: 100%;
+	}
+}
