@@ -18,8 +18,8 @@
 		border-bottom-left-radius: 2px;
 		border-bottom-right-radius: 2px;
 		background-position: 0% 0%;
+		background: linear-gradient(to right, $purple-dark, $purple-light, $purple-dark);
 		background-size: 500% auto;
-		background: linear-gradient(to right, $purple-dark, $purple-light);
 		animation: gradient 3s linear infinite;
 	}
 
