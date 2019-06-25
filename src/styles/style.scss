@@ -1,3 +1,4 @@
+@import 'buttons';
 @import 'colors';
 @import 'forms';
 @import 'typography';
@@ -5,6 +6,10 @@
 html {
 	box-sizing: border-box;
 	font-size: 10px;
+}
+
+button {
+	border: none;
 }
 
 #app {
