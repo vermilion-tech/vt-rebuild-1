@@ -15,6 +15,7 @@
 	font-size: 1.13em;
 	font-weight: bold;
 	transition: all 0.2s ease-in-out;
+	box-shadow: -0.5rem, 0.5rem, $slate-color;
 
 	&:before,
 	&:after {
@@ -29,9 +30,9 @@
 	&:before {
 		border-image: linear-gradient(45deg, $purple-dark 0%, adjust-hue($purple-dark, 10%) 100%);
 		border-image-slice: 1 1 0 1;
-		left: -0.90rem;
-		top: .15rem;
-		width: .31rem;
+		left: -0.94rem;
+		top: .175rem;
+		width: .33rem;
 		height: 100%;
 		transform: skewY(-45deg);
 	}
@@ -40,9 +41,35 @@
 	&:after {
 		border-image: linear-gradient(45deg, $purple-dark 0%, $purple-light 100%);
     border-image-slice: 1 1 1 0;
-    bottom: -0.90rem; right: 0.10em;
+    bottom: -0.95rem;
+		right: 0.15em;
     width: 100%;
     height: .31em;
     transform: skewX(-45deg);
 	}
+
+	&:hover {
+		background-color: white;
+    background-size: 90%;
+    transform: translate(0.5em,-0.5em);
+    box-shadow: -1em 1em .15em transparentize($slate-color,.9);
+
+		&:before {
+			background-image: linear-gradient(45deg, $purple-dark 0%, adjust-hue($purple-dark,10%) 100%);
+			height: calc(100% - .25em);
+			border-image-slice: 1;
+		}
+
+		&:after {
+			background-image: linear-gradient(45deg, $purple-dark 0%, $purple-light 100%);
+			width: calc(100% - .275em);
+			border-image-slice: 1;
+		}
+
+	}
+}
+
+.vt-gradient-btn.filled {
+	border-image-slice: 1;
+	background-image: linear-gradient(45deg, $purple-dark 0%, $purple-light 100%);
 }

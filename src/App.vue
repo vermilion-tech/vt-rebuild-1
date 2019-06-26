@@ -4,7 +4,7 @@
       <FormTextInput placeholder="Name"/>
       <FormTextArea placeholder="Message" rows="6"/>
       <GradientButton>
-        Send
+        Send Send Send!
       </GradientButton>
     </form>
     <img alt="Vue logo" src="./assets/logo.png">
