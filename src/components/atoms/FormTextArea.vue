@@ -3,6 +3,7 @@
 	<div class="vt-form-text">
 
 		<textarea
+			:id="id"
 			:class="{'has-content': value != ''}"
 			:placeholder="showPlaceholder ? placeholder: ''"
 			:required="required"
@@ -18,40 +19,10 @@
 </template>
 
 <script>
+import TogglePlaceholderMixin from '../../mixins/forms/toggle-placeholder';
 export default {
 	name: "FormTextArea",
-	props: ['placeholder', 'required', 'rows', 'value'],
-
-	data: function() {
-		return {
-			focused: false,
-			showPlaceholder: false,
-		}
-	},
-
-	methods: {
-
-		togglePlaceholder: function(isFocused) {
-
-			this.focused = isFocused;
-
-			if (isFocused && this.value == '') {
-				this.showPlaceholder = true;
-				return;
-			}
-
-			this.showPlaceholder = false;
-
-		}
-
-	},
-
-	watch: {
-
-		value: function() {
-			this.togglePlaceholder(this.focused);
-		}
-
-	}
+	props: ['id', 'placeholder', 'required', 'rows', 'value'],
+	mixins: [ TogglePlaceholderMixin ]
 }
 </script>
