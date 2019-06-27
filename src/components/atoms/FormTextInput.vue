@@ -4,17 +4,26 @@
 	<div class="vt-form-text">
 
 		<input type="text"
-			:placeholder="placeholder"
+			:id="id"
+			:class="{'has-content': value != ''}"
+			:placeholder="showPlaceholder ? placeholder: ''"
+			:required="required"
 			:value="value"
+			@focus="togglePlaceholder(true)"
+			@blur="togglePlaceholder(false)"
 			@input="$emit('input', $event.target.value)"/>
+
+		<slot></slot>
 
 	</div>
 
 </template>
 
 <script>
+import TogglePlaceholderMixin from '../../mixins/forms/toggle-placeholder';
 export default {
 	name: "FormTextInput",
-	props: ['placeholder', 'value']
+	props: ['id', 'placeholder', 'required', 'value'],
+	mixins: [ TogglePlaceholderMixin ]
 }
 </script>
