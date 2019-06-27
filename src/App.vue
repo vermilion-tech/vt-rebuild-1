@@ -34,8 +34,8 @@
 <script>
 import Container from './components/atoms/Container.vue';
 import FloatingFormLabel from './components/atoms/FloatingFormLabel.vue';
-import FormTextInput from './components/atoms/FormTextInput.vue';
-import FormTextArea from './components/atoms/FormTextArea.vue';
+import FormTextInput from './components/molecules/FormTextInput.vue';
+import FormTextArea from './components/molecules/FormTextArea.vue';
 import GradientButton from './components/atoms/GradientButton.vue';
 export default {
   name: 'app',
