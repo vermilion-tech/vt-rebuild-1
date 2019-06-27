@@ -1,6 +1,7 @@
 @import 'colors';
 
 .vt-gradient-btn {
+	box-sizing: content-box;
 	border: 3px solid $purple-dark;
 	border-image: linear-gradient(45deg, $purple-dark 0%, $purple-light 100%);
 	border-image-slice: 1 1 0 0;
