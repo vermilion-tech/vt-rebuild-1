@@ -10,24 +10,31 @@
         Send With Style!
       </GradientButton>
     </form>
-    <img alt="Vue logo" src="./assets/logo.png">
-    <HelloWorld msg="Welcome to Your Vue.js App"/>
+
+    <Container>
+      <h1>This is an h1 header.</h1>
+      <h2>This is an h2 header.</h2>
+      <h3>This is an h3 header.</h3>
+      <h4>This is an h4 header.</h4>
+      <h5>This is an h5 header.</h5>
+      <h6>This is an h6 header (holy shit this is small).</h6>
+    </Container>
 
   </div>
 </template>
 
 <script>
+import Container from './components/atoms/Container.vue';
 import FormTextInput from './components/atoms/FormTextInput.vue';
 import FormTextArea from './components/atoms/FormTextArea.vue';
 import GradientButton from './components/atoms/GradientButton.vue';
-import HelloWorld from './components/HelloWorld.vue'
 export default {
   name: 'app',
   components: {
+    Container,
     FormTextArea,
     FormTextInput,
     GradientButton,
-    HelloWorld
   }
 }
 </script>
