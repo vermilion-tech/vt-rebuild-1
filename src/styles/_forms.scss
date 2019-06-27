@@ -1,13 +1,19 @@
+/**
+ * Collection of styles revolving around form elements
+ * * * * */
+
+// Class applied to input elements that take some form of text as a value and
+// textareas
 .vt-form-text {
 	background-color: $pale-yellow;
 	border-radius: 2px;
 	padding: 1.4rem 2rem 1.6rem;
 	width: 100%;
 	position: relative;
-	margin: 3rem 2rem 0 2rem;
+	margin-top: 3rem;
 
+	// The animated stripe at the bottom
 	&:after {
-		box-sizing: inherit;
 		content: "";
 		position: absolute;
 		bottom: 0;
@@ -23,7 +29,8 @@
 		animation: gradient 3s linear infinite;
 	}
 
-	input, textarea{
+	// Actual input elements
+	input, textarea {
 		background: transparent;
 		border-style: none;
 		color: $maroon;
@@ -37,25 +44,16 @@
 		font-family: "Amiko", sans-serif;
 	}
 
-	input:focus ~ .vt-floating-label,
-	input.has-content ~ .vt-floating-label,
-	textarea:focus ~ .vt-floating-label,
-	textarea.has-content ~.vt-floating-label {
-
-		font-size: 1.4rem;
-		transform: translate3d(0, -175%, 0);
-		opacity: 1;
-		margin-left: 0;
-
-	}
-
 }
 
+// Animation used for "stripe" above.  Simply offsets the gradient
 @keyframes gradient {
 	0%{background-position:0 0}
 	100%{background-position:100% 0}
 }
 
+// Applied to label elements to make them "float" above inputs like a
+// placeholder
 .vt-floating-label {
 	color: $maroon;
 	cursor: text;
@@ -69,4 +67,14 @@
 	opacity: 0.5;
 	font-size: 16px;
 	z-index: 1000;
+}
+
+.vt-form-text input:focus ~ .vt-floating-label,
+.vt-form-text input.has-content ~ .vt-floating-label,
+.vt-form-text textarea:focus ~ .vt-floating-label,
+.vt-form-text textarea.has-content ~.vt-floating-label {
+	font-size: 1.4rem;
+	transform: translate3d(0, -175%, 0);
+	opacity: 1;
+	margin-left: 0;
 }
