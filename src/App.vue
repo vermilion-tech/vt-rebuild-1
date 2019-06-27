@@ -25,7 +25,8 @@
       <h3>This is an h3 header.</h3>
       <h4>This is an h4 header.</h4>
       <h5>This is an h5 header.</h5>
-      <h6>This is an h6 header (holy shit this is small).</h6>
+      <h6>This is an h6 header.</h6>
+      <p>This is a paragraph.</p>
     </Container>
 
   </div>
