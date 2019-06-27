@@ -3,16 +3,15 @@
 @import 'forms';
 @import 'typography';
 
+// A few base-styles / resets
 html {
 	box-sizing: border-box;
+	font-size: 10px;
+	color: $black;
 }
 
 *, *:before, *:after {
 	box-sizing: inherit;
-}
-
-html {
-	font-size: 10px;
 }
 
 button {
