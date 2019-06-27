@@ -4,7 +4,7 @@
 	padding: 1.4rem 2rem 1.6rem;
 	width: 100%;
 	position: relative;
-	margin: 2rem;
+	margin: 3rem 2rem 0 2rem;
 
 	&:after {
 		box-sizing: inherit;
@@ -36,10 +36,36 @@
 	textarea {
 		font-family: "Amiko", sans-serif;
 	}
-	
+
+	input:focus ~ .vt-floating-label,
+	input.has-content ~ .vt-floating-label,
+	textarea:focus ~ .vt-floating-label,
+	textarea.has-content ~.vt-floating-label {
+
+		font-size: 1.4rem;
+		transform: translate3d(0, -175%, 0);
+		opacity: 1;
+		margin-left: 0;
+
+	}
+
 }
 
 @keyframes gradient {
 	0%{background-position:0 0}
 	100%{background-position:100% 0}
+}
+
+.vt-floating-label {
+	color: $maroon;
+	position: absolute;
+	top: 0;
+	left: 0;
+	margin-top: 1.4rem;
+	margin-left: 2rem;
+	padding: 0.2rem;
+	transition: all 0.2s ease;
+	opacity: 0.5;
+	font-size: 16px;
+	z-index: 1000;
 }
