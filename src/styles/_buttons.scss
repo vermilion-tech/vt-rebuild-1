@@ -72,4 +72,33 @@
 .vt-gradient-btn.filled {
 	border-image-slice: 1;
 	background-image: linear-gradient(45deg, $purple-dark 0%, $purple-light 100%);
+	color: white;
+
+	&:before {
+		border-image-slice: 1;
+		background-image: linear-gradient(45deg, $purple-dark 0%, adjust-hue($purple-dark,10%) 100%);
+		left: -1.24rem;
+		top: .15em;
+	}
+
+	&:after {
+		border-image-slice: 1;
+		background-image: linear-gradient(45deg, $purple-dark 0%, $purple-light 100%);
+		bottom: -1.10em;
+		right: .16em;
+	}
+
+	&:hover {
+		background: white;
+		border-image: linear-gradient(45deg, $purple-dark 0%, $purple-light 100%);
+		border-image-slice: 1;
+		color: $slate-color;
+
+		&:before {
+			height: 100%;
+		}
+		&:after {
+			width: 100%;
+		}
+	}
 }

@@ -6,6 +6,9 @@
       <GradientButton>
         Send Send Send!
       </GradientButton>
+      <GradientButton :filled="true">
+        Send With Style!
+      </GradientButton>
     </form>
     <img alt="Vue logo" src="./assets/logo.png">
     <HelloWorld msg="Welcome to Your Vue.js App"/>
