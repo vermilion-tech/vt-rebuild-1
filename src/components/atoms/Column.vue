@@ -2,6 +2,7 @@
 	purposes.  Props are optional, you can just feed it more classes -->
 <template>
 	<div class="col">
+		<slot></slot>
 	</div>
 </template>
 
