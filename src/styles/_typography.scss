@@ -1,16 +1,22 @@
+// Unless otherwise stated, all text will have a font family of "amiko" and have
+// a default weight of 400
 body {
 	font-family: "amiko", sans-serif;
 	font-weight: 400;
 }
 
+// Paragraphs are special in that they are a little bit larger than the normal
+// font size
 p {
 	font-size: 1.6rem;
 }
 
+// Headers use "signika" as a font
 h1, .h1, h2, .h2, h3, .h3, h4, .h4, h5, .h5, h6, .h6 {
 	font-family: "signika", sans-serif;
 }
 
+// Header sizes, by default, range from 3rem down to 1.6rem
 h1 {
 	font-size: 3rem;
 }
@@ -33,4 +39,17 @@ h5 {
 
 h6 {
 	font-size: 1.6rem;
+}
+
+// Text alignment classes
+.text-left {
+	text-align: left;
+}
+
+.text-center {
+	text-align: center;
+}
+
+.text-right {
+	text-align: right;
 }
