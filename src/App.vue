@@ -1,6 +1,8 @@
 <template>
   <div id="app">
 
+    <Navbar :pages="pages" />
+
     <Container>
 
       <h1>This is an h1 header.</h1>
@@ -43,7 +45,7 @@
           Send With Style!
         </GradientButton>
       </form>
-      
+
     </Container>
 
   </div>
@@ -56,6 +58,7 @@ import FloatingFormLabel from './components/atoms/FloatingFormLabel.vue';
 import FormTextInput from './components/molecules/FormTextInput.vue';
 import FormTextArea from './components/molecules/FormTextArea.vue';
 import GradientButton from './components/atoms/GradientButton.vue';
+import Navbar from './components/molecules/Navbar.vue';
 import Row from './components/atoms/Row.vue';
 export default {
   name: 'app',
@@ -66,13 +69,28 @@ export default {
     FormTextArea,
     FormTextInput,
     GradientButton,
+    Navbar,
     Row
   },
 
   data: function() {
     return {
       name: '',
-      message: ''
+      message: '',
+      pages: [
+        {
+          name: 'Services',
+          path: 'services'
+        },
+        {
+          name: 'Projects',
+          path: 'projects'
+        },
+        {
+          name: 'About Us',
+          path: 'about'
+        }
+      ]
     }
   }
 }
