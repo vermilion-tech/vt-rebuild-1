@@ -18,6 +18,10 @@
 	transition: all 0.2s ease-in-out;
 	box-shadow: -0.5rem, 0.5rem, $slate-color;
 
+	&.offset-bottom {
+		margin-top: -.31rem;
+	}
+
 	&:before,
 	&:after {
 		border: 3px solid $purple-dark;
