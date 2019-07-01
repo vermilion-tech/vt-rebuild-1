@@ -2,8 +2,8 @@
 <template>
 	<div class="navbar">
 
-		<div>
-			<!-- placeholder for image -->
+		<div class="brand">
+			<img src="../../assets/vt-logo-wide.png"/>
 		</div>
 
 		<!-- Links proper.  Fits on the right-hand side -->
@@ -44,9 +44,19 @@ export default {
 	align-items: center;
 	justify-content: flex-end;
 
+	.brand {
+		flex-grow: 1;
+
+		img {
+			max-width: 200px;
+			margin: 2rem;
+		}
+	}
+
 	.navbar-right {
 		display: flex;
 		align-items: flex-end;
+		flex-grow: 0;
 	}
 
 	.menu {
