@@ -6,6 +6,11 @@
 @import 'whitespace';
 
 // A few base-styles / resets
+body, html {
+	margin: 0;
+	padding: 0;
+}
+
 html {
 	box-sizing: border-box;
 	font-size: 10px;
@@ -23,5 +28,4 @@ button {
 #app {
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
-  margin-top: 60px;
 }
