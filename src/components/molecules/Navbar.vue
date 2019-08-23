@@ -1,7 +1,7 @@
 <!-- A navbar designed to fit at the top -->
 <template>
 
-	<div class="navbar" :class="{'mobile-nav': $mq == 'smartphone' || $mq == 'tablet'}">
+	<div class="navbar">
 
 		<div class="brand">
 			<img src="../../assets/vt-logo-wide.png"/>
@@ -27,23 +27,36 @@
 
 		</div>
 
-		<!-- Mobile drawer -->
-		<div class="mobile-drawer" v-if="drawer">
+		<!-- Mobile Menu -->
+		<div class="mobile-nav" v-if="drawer && $mq == 'tablet' || $mq == 'smartphone'">
 
-			<div class="brand">
-				<img src="../../assets/vt-logo-wide.png"/>
+			<div class="overlay">
 			</div>
 
-			<GradientLinkButton
-				class="offset-bottom"
-				:filled="true"
-				path=""
-				name="Get a quote"/>
+			<div class="mobile-drawer">
 
-			<router-link v-for="page in pages" class="h6"
-				:to="{ path: page.path}">
-				{{ page.name }}
-			</router-link>
+				<div class="text-center vt-m-2">
+					<div class="brand">
+						<img src="../../assets/vt-logo-wide.png"/>
+					</div>
+
+					<GradientLinkButton
+						class="offset-bottom"
+						:filled="true"
+						path=""
+						name="Get a quote"/>
+				</div>
+
+				<div class="menu">
+
+					<router-link v-for="page in pages" class="h5"
+						:to="{ path: page.path}">
+						{{ page.name }}
+					</router-link>
+
+				</div>
+
+			</div>
 
 		</div>
 
@@ -123,4 +136,47 @@ export default {
 	}
 
 }
+
+.mobile-nav {
+
+	position: fixed;
+	top: 0;
+	left: 0;
+	width: 100%;
+	height: 100%;
+	z-index: 1000;
+
+	.overlay {
+		position: absolute;
+		top: 0;
+		left: 0;
+		width: 100%;
+		height: 100%;
+		background-color: $black;
+		opacity: 0.8;
+	}
+
+	.mobile-drawer {
+		position: absolute;
+		top: 0;
+		right: 0;
+		opacity: 1;
+		width: 95%;
+		height: 100%;
+		background-color: lighten($purple-dark, 7%);
+
+		.menu {
+			display: block;
+
+			a {
+				background-color: $pale-yellow;
+				color: $maroon;
+				text-transform: uppercase;
+				border-bottom: 1px solid darken($pale-yellow, 20%);
+			}
+		}
+	}
+
+}
+
 </style>
