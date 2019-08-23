@@ -56,6 +56,21 @@
 
 				</div>
 
+				<div class="social vt-mw-3 vt-mh-1">
+					<a href="#">
+						<img src="../../assets/vt-twitter.png"/>
+					</a>
+					<a href="#">
+						<img src="../../assets/vt-facebook.png"/>
+					</a>
+					<a href="#">
+						<img src="../../assets/vt-instagram.png"/>
+					</a>
+					<a href="#">
+						<img src="../../assets/vt-linkedin.png"/>
+					</a>
+				</div>
+
 			</div>
 
 		</div>
@@ -144,7 +159,7 @@ export default {
 	left: 0;
 	width: 100%;
 	height: 100%;
-	z-index: 1000;
+	z-index: 2000;
 
 	.overlay {
 		position: absolute;
@@ -158,6 +173,8 @@ export default {
 
 	.mobile-drawer {
 		position: absolute;
+		display: flex;
+		flex-direction: column;
 		top: 0;
 		right: 0;
 		opacity: 1;
@@ -166,13 +183,28 @@ export default {
 		background-color: lighten($purple-dark, 7%);
 
 		.menu {
+			flex-grow: 1;
 			display: block;
+			height: auto;
+			overflow: scroll;
 
 			a {
 				background-color: $pale-yellow;
 				color: $maroon;
 				text-transform: uppercase;
 				border-bottom: 1px solid darken($pale-yellow, 20%);
+			}
+		}
+
+		.social {
+			flex-grow: 0;
+			display: flex;
+			align-items: center;
+
+			a {
+				img {
+					width: 100%;
+				}
 			}
 		}
 	}
