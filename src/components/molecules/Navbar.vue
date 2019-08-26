@@ -36,6 +36,7 @@
 			<div class="mobile-drawer">
 
 				<div class="text-center vt-m-2">
+
 					<div class="brand">
 						<img src="../../assets/vt-logo-wide.png"/>
 					</div>
@@ -45,6 +46,7 @@
 						:filled="true"
 						path=""
 						name="Get a quote"/>
+
 				</div>
 
 				<div class="menu">
@@ -111,7 +113,10 @@ export default {
 	align-items: center;
 	justify-content: flex-end;
 	padding-top: 1rem;
-
+	position: fixed;
+	width: 100%;
+	z-index: 1000;
+	
 	.brand {
 		flex-grow: 1;
 
