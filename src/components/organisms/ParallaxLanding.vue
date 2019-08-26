@@ -16,6 +16,7 @@
 </script>
 
 <style lang="scss" scoped>
+@import '../../styles/breakpoints';
 @import '../../styles/colors';
 .parallax-container {
 	height: 100vh;
@@ -27,18 +28,27 @@
 	align-items: center;
 	justify-content: center;
 	position: relative;
+	text-align: center;
 }
 
 .icons-left {
 	position: absolute;
-	left: 3rem;
-	top: 15rem;
+	left: 0rem;
+	top: 20rem;
+
+	@include desktop {
+		left: 3rem;
+	}
 }
 
 .icons-right {
 	position: absolute;
-	right: 9rem;
 	top: 20rem;
+	right: 0rem;
+
+	@include desktop {
+		right: 9rem;
+	}
 }
 
 .clouds-left {
@@ -50,6 +60,10 @@
 .falling-clouds {
 	position: absolute;
 	bottom: -5rem;
-	right: 3rem;
+	right: 0rem;
+
+	@include desktop {
+		right: 5rem;
+	}
 }
 </style>

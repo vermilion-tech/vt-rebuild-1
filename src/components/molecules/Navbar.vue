@@ -28,7 +28,7 @@
 		</div>
 
 		<!-- Mobile Menu -->
-		<div class="mobile-nav" v-if="drawer && $mq == 'tablet' || $mq == 'smartphone'">
+		<div class="mobile-nav" v-if="drawer && ($mq == 'tablet' || $mq == 'smartphone')">
 
 			<div class="overlay">
 			</div>
@@ -116,7 +116,7 @@ export default {
 	position: fixed;
 	width: 100%;
 	z-index: 1000;
-	
+
 	.brand {
 		flex-grow: 1;
 
